@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+	<div class="container">
+		<style type="text/css">
+			*{
+				text-align: center;
+			}
+		</style>
+		<h1 class="font-weight-bold" style="margin-top: 50px;">
+			Привет! Хочешь легко заработать?! Тогда начинай прямо сейчас вместе с нашим сайтом!💰💰💰
+		</h1>
+		<p class="font-weight-bold" style="font-size: 20px;">
+			⚡️Быстрые выплаты
+			⚡️Постоянные бонусы и розыгрыши
+			⚡️Отзывчивая Тех. Поддержка
+			⚡️Работаем уже 1,5 года на рынке⚡️
+		</p>
+		<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+			<a href="{% url 'farm:farm'  %}" class="btn btn-success" style="font-size: 30px;">Начать зарабатывать!</a>
+		</div>
+		<p style="text-align: left;">
+			<a href="https://t.me/easy_cash_for_everyone_bot"><img src="https://img.icons8.com/color/344/telegram-app--v2.png" height="50px" width="50px"></a>Мы в telegram <br>
+			<a href="" style="font-size:10px; color: black;">Правила</a>
+		</p>
+	</div>
+{% endblock content %}

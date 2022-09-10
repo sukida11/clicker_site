@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="container">
+		<div style="text-align: center;">
+			<h2>
+				{{user.username}}
+			</h2>
+			<p>
+				Ваш ID для вывода: {{user.id}}
+			</p>
+			<div>
+				<h1>
+					Ваш баланс составляет: {{balance}}
+				</h1>
+				<!-- <p>
+					Ваш бонус на данный момент равен {{x}}x <br>
+					<a href="" style="color:black;">Приобрести бонус.</a>
+				</p> -->
+			</div>
+		</div>
+		<div class="container" style="text-align: center; margin-top: 100px;">
+			<form method="post">
+				{% csrf_token %}
+				<h3>
+					Заработать {{user_for_money}} RUB
+				</h3>
+				<input type="submit" style="font-size: 30px;" name="farm" value="Заработать" class="btn btn-success">
+			</form>
+
+			<a href="https://t.me/vivod_deneg_bot" class="btn btn-danger" style="margin-top:100px; font-size: 33px;">Вывести</a>
+			<p>
+				Вывод проходит через телеграмм бота. Для вывода нажмите на кнопку и заполните нужные данные.
+			</p>
+		</div><!-- <iframe src="https://widget.qiwi.com/widgets/big-button-220x100?publicKey=48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP5hxV87wk4V7KNzQBR1hZLu3bw7L4wXdvroy8otYY4tFg3xfqVsmzLBDzw4jVHxwJGGmMmdswWic94pyUYVK14tT7trYPn2vPWJBM9jSjR&noCache=true" width="220" height="100"allowTransparency="true" scrolling="no" frameBorder="0"></iframe> -->
+	</div>
+{% endblock content %}
